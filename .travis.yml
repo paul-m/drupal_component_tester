@@ -1,15 +1,14 @@
 sudo: false
 language: php
 php:
-  - 7.1
+  - 7.0
 
 before_script:
-  - composer selfupdate --no-progress
   # Try to use composer to create a Drupal 8 project.
   - composer create-project drupal/drupal drupal ~8.4@dev --no-progress
   # Copy the tests out of core.
   - mkdir tests
-  - cp -R drupal/core/tests/ ./tests/
+  - cp -R drupal/core/tests/ ./tests
   # Install our components through composer. Currently this is limited to
   # drupal/core-utilities
   - composer update

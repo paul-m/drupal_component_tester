@@ -1,6 +1,10 @@
 Drupal Component Tester
 =======================
 
+Status
+---
+[![Build Status](https://travis-ci.org/paul-m/drupal_component_tester.svg?branch=master)](https://travis-ci.org/paul-m/drupal_component_tester)
+
 What?
 -----
 

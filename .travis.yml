@@ -1,0 +1,21 @@
+sudo: false
+language: php
+php:
+  - 7.1
+
+before_script:
+  - composer selfupdate --no-progress
+  # Try to use composer to create a Drupal 8 project.
+  - composer create-project drupal/drupal drupal ~8.4@dev --no-progress
+  # Copy the tests out of core.
+  - mkdir tests
+  - cp -R drupal/core/tests/ ./tests/
+  # Install our components through composer. Currently this is limited to
+  # drupal/core-utilities
+  - composer update
+
+script:
+  # We currently don't use core's phpunit.xml.dist or bootstrap.php. This is
+  # because there are a lot of dependencies in there that won't be available to
+  # us. As core gets better at this, we'll need to change this invocation.
+  - ./vendor/bin/phpunit --bootstrap component_tester/bootstrap.php tests/Drupal/Tests/Component/Utility/

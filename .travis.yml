@@ -1,10 +1,12 @@
 sudo: false
 language: php
 php:
-  - 7.0
+  - 7.1
 
 before_script:
-  # Try to use composer to create a Drupal 8 project.
+  # Try to use composer to create a Drupal 8 project. We install using composer
+  # instead of a git clone to exercise the component requirements after
+  # https://www.drupal.org/node/2867960
   - composer create-project drupal/drupal drupal ~8.4@dev --no-progress
   # Copy the tests out of core.
   - cp -R drupal/core/tests .

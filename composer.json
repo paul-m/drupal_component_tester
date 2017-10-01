@@ -29,6 +29,6 @@
       "drupal/core-uuid": "~8.4"
   },
   "require-dev": {
-      "phpunit/phpunit": ">=4.8.28 <5"
+      "phpunit/phpunit": ">=4.8.35 <5"
   }
 }

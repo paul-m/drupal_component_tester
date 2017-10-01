@@ -1,22 +1,22 @@
 sudo: false
 language: php
 php:
+  - 5.5
   - 7.1
 
 before_script:
   # Try to use composer to create a Drupal 8 project. We install using composer
   # instead of a git clone to exercise the component requirements after
   # https://www.drupal.org/node/2867960
-  - composer create-project drupal/drupal drupal ~8.4@dev --no-progress
+  - composer create-project drupal/drupal drupal 8.4.*@dev --no-progress
   # Copy the tests out of core.
   - cp -R drupal/core/tests .
   - test -f tests/Drupal/Tests/UnitTestCase.php
-  # Install our components through composer. Currently this is limited to
-  # drupal/core-utilities
+  # Install our components through composer.
   - composer update --no-progress
 
 script:
   # We currently don't use core's phpunit.xml.dist or bootstrap.php. This is
   # because there are a lot of dependencies in there that won't be available to
   # us. As core gets better at this, we'll need to change this invocation.
-  - ./vendor/bin/phpunit --bootstrap component_tester/bootstrap.php tests/Drupal/Tests/Component/Utility/
+  - ./vendor/bin/phpunit --bootstrap bootstrap.php tests/Drupal/Tests/Component/

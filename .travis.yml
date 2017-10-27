@@ -21,6 +21,6 @@ script:
   # us. As core gets better at this, we'll need to change this invocation.
   - ./vendor/bin/phpunit --bootstrap bootstrap.php tests/Drupal/Tests/Component/
   # Install our components with the highest possible.
-  - composer update --prefer-lowest --no-progress
+  - composer update --no-progress
   # Repeat the tests.
   - ./vendor/bin/phpunit --bootstrap bootstrap.php tests/Drupal/Tests/Component/

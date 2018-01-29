@@ -5,15 +5,14 @@ php:
   - 7.1
 
 before_script:
-  # Try to use composer to create a Drupal 8 project. We install using composer
-  # instead of a git clone to exercise the component requirements after
-  # https://www.drupal.org/node/2867960
-  - composer create-project drupal/drupal drupal 8.4.*@dev --no-progress
+  # Git clone the Drupal 8.5.x repo, so that we can apply patches to it.
+  - git clone --branch 8.5.x https://git.drupal.org/project/drupal.git
+  # DL and apply patches.
   # Copy the tests out of core.
   - cp -R drupal/core/tests .
   - test -f tests/Drupal/Tests/UnitTestCase.php
   # Install our components through composer.
-  - composer update --no-progress
+  - composer update --no-progress --no-suggest
 
 script:
   # We currently don't use core's phpunit.xml.dist or bootstrap.php. This is

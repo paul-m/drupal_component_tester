@@ -114,13 +114,9 @@ function buildComposerArray($component_package, $group, $path) {
         'replace' => FALSE,
       ],
     ],
-    'autoload' => [
-      'psr-4' => [
-        "DrupalComponentTester\\" => 'src',
-      ],
-    ],
     'autoload-dev' => [
       'psr-4' => [
+        "DrupalComponentTester\\" => 'src',
         "Drupal\\Tests\\Component\\$group\\" => "core/tests/Drupal/Tests/Component/$group",
       ],
     ],

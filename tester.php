@@ -92,7 +92,6 @@ function buildComposerArray($component_package, $group, $path) {
     'description' => 'Dummy package for the component.',
     'license' => 'GPL-2.0+',
     'minimum-stability' => 'dev',
-    'prefer-stable' => TRUE,
     'require' => [
       'phpunit/phpunit' => '^4.8.35 || ^6.1',
       'wikimedia/composer-merge-plugin' => '@stable',

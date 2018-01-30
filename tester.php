@@ -114,6 +114,11 @@ function buildComposerArray($component_package, $group, $path) {
         'replace' => FALSE,
       ],
     ],
+    'autoload' => [
+      'psr-4' => [
+        "DrupalComponentTester\\" => 'src',
+      ],
+    ],
     'autoload-dev' => [
       'psr-4' => [
         "Drupal\\Tests\\Component\\$group\\" => "core/tests/Drupal/Tests/Component/$group",
@@ -122,6 +127,10 @@ function buildComposerArray($component_package, $group, $path) {
     'respositories' => [
       'type' => 'composer',
       'url' => 'https://packages.drupal.org/8',
+    ],
+    'scripts' => [
+      'post-update-cmd' => 'DrupalComponentTester\Composer::upgradePHPUnit',
+      'drupal-phpunit-upgrade' => '@composer update phpunit/phpunit --with-dependencies --no-progress',
     ],
   ];
 }

@@ -59,7 +59,7 @@ foreach ($components as $package => $group) {
     )
   );
 
-  $composer_command = 'composer update --lock --no-progress --no-suggest';
+  $composer_command = 'composer update --lock --no-progress --no-suggest --prefer-dist';
   echo "\n\nPRIMING -> $composer_command\n\n";
   if ($signal = execute($composer_command)) {
     exit($signal);
@@ -67,7 +67,7 @@ foreach ($components as $package => $group) {
 
   // Composer update and run tests.
   foreach (['--prefer-lowest', ' '] as $argument) {
-    $composer_command = 'composer update --lock --no-progress --no-suggest ' . $argument;
+    $composer_command = 'composer update --lock --no-progress --no-suggest --prefer-dist ' . $argument;
     echo "\n\nCOMPOSER -> $composer_command\n\n";
     if ($signal = execute($composer_command)) {
       exit($signal);

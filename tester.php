@@ -6,7 +6,7 @@ $loader = require __DIR__ . '/vendor/autoload.php';
 
 $components = [
   // 'package/name' => 'Group',
-  'drupal/core-annotation' => 'Annotation',
+//  'drupal/core-annotation' => 'Annotation',
   'drupal/core-assertion' => 'Assertion',
   'drupal/core-bridge' => 'Bridge',
   'drupal/core-class-finder' => 'ClassFinder',
@@ -97,7 +97,7 @@ function buildComposerArray($component_package, $group, $path) {
     // @todo: Use VCS tags for versioning.
     'version' => '8.5.0',
     'description' => 'Dummy package for the component.',
-    'license' => 'GPL-2.0+',
+    'license' => 'GPL-2.0-or-later',
     'minimum-stability' => 'dev',
     'prefer-stable' => TRUE,
     'require' => [

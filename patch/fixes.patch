@@ -38,15 +38,90 @@ index 6b7f89f00b..23a8b17ee2 100644
      "psr-4": {
        "Drupal\\Component\\Datetime\\": ""
 diff --git a/core/lib/Drupal/Component/DependencyInjection/composer.json b/core/lib/Drupal/Component/DependencyInjection/composer.json
-index 846034affa..38fac630c5 100644
+index 846034affa..0115ec0826 100644
 --- a/core/lib/Drupal/Component/DependencyInjection/composer.json
 +++ b/core/lib/Drupal/Component/DependencyInjection/composer.json
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,10 @@
    },
    "require": {
      "php": ">=5.5.9",
 -    "symfony/dependency-injection": ">=2.8 <4.0.0"
 +    "symfony/dependency-injection": ">=3.0.0 <4.0.0"
++  },
++  "require-dev": {
++    "drupal/core-utility": "@stable"
    },
    "suggest": {
      "symfony/expression-language": "For using expressions in service container configuration"
+diff --git a/core/lib/Drupal/Component/Discovery/composer.json b/core/lib/Drupal/Component/Discovery/composer.json
+index 4de189402a..349f2597af 100644
+--- a/core/lib/Drupal/Component/Discovery/composer.json
++++ b/core/lib/Drupal/Component/Discovery/composer.json
+@@ -9,6 +9,9 @@
+     "drupal/core-file-cache": "^8.2",
+     "drupal/core-serialization": "^8.2"
+   },
++  "require-dev": {
++    "mikey179/vfsStream": "^1.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Discovery\\": ""
+diff --git a/core/lib/Drupal/Component/FileCache/composer.json b/core/lib/Drupal/Component/FileCache/composer.json
+index 86e33a5f91..49f753317f 100644
+--- a/core/lib/Drupal/Component/FileCache/composer.json
++++ b/core/lib/Drupal/Component/FileCache/composer.json
+@@ -7,6 +7,9 @@
+   "require": {
+     "php": ">=5.5.9"
+   },
++  "require-dev": {
++    "drupal/core-utility": "@stable"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\FileCache\\": ""
+diff --git a/core/lib/Drupal/Component/FileSystem/composer.json b/core/lib/Drupal/Component/FileSystem/composer.json
+index 528bb0744a..084e991766 100644
+--- a/core/lib/Drupal/Component/FileSystem/composer.json
++++ b/core/lib/Drupal/Component/FileSystem/composer.json
+@@ -7,6 +7,9 @@
+   "require": {
+     "php": ">=5.5.9"
+   },
++  "require-dev": {
++    "mikey179/vfsStream": "^1.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\FileSystem\\": ""
+diff --git a/core/lib/Drupal/Component/PhpStorage/composer.json b/core/lib/Drupal/Component/PhpStorage/composer.json
+index 614652a95c..d650ffb633 100644
+--- a/core/lib/Drupal/Component/PhpStorage/composer.json
++++ b/core/lib/Drupal/Component/PhpStorage/composer.json
+@@ -7,6 +7,10 @@
+   "require": {
+     "php": ">=5.5.9"
+   },
++  "require-dev": {
++    "drupal/core-utility": "@stable",
++    "mikey179/vfsStream": "^1.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\PhpStorage\\": ""
+diff --git a/core/lib/Drupal/Component/Transliteration/composer.json b/core/lib/Drupal/Component/Transliteration/composer.json
+index abdce4fc81..1787d322f3 100644
+--- a/core/lib/Drupal/Component/Transliteration/composer.json
++++ b/core/lib/Drupal/Component/Transliteration/composer.json
+@@ -8,6 +8,10 @@
+     "irc": "irc://irc.freenode.net/drupal-contribute",
+     "source": "https://www.drupal.org/project/drupal/git-instructions"
+   },
++  "require-dev": {
++    "drupal/core-utility": "@stable",
++    "mikey179/vfsStream": "^1.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Transliteration\\": ""

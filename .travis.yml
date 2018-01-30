@@ -16,7 +16,8 @@ before_script:
   - mkdir -p workspace/core/tests/Drupal/Tests
   - cp -R drupal/core/tests/Drupal/Tests/Component ./workspace/core/tests/Drupal/Tests/
   - test -f workspace/core/tests/Drupal/Tests/Component/DrupalComponentTest.php
+  - composer install --no-progress --no-suggest
 
 script:
   # Run our tester script. It will always die on fail or error.
-  - php ./tester.php
+  - php tester.php

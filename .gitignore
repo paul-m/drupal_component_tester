@@ -1,4 +1,9 @@
 drupal/
-tests/
 vendor/
 composer.lock
+workspace/component
+workspace/core
+workspace/vendor
+workspace/composer.json
+workspace/composer.lock
+

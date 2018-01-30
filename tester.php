@@ -103,7 +103,7 @@ function buildComposerArray($component_package, $group, $path) {
     'require' => [
       'phpunit/phpunit' => '^4.8.35 || ^6.1',
 //      'symfony/phpunit-bridge' => '^3.4.3',
-      'wikimedia/composer-merge-plugin' => '@stable',
+      'wikimedia/composer-merge-plugin' => '^1.4',
     ],
     'replace' => [
       $component_package => 'self.version',

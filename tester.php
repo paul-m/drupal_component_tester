@@ -74,6 +74,12 @@ foreach ($components as $package => $group) {
       exit($signal);
     }
 
+    $composer_command = 'composer dumpautoload';
+    echo "\n\nCOMPOSER -> $composer_command\n\n";
+    if ($signal = execute($composer_command)) {
+      exit($signal);
+    }
+
     $phpunit_command = './vendor/bin/phpunit core/tests/Drupal/Tests/Component/' . $group;
     echo "\n\nPHPUNIT -> $phpunit_command\n\n";
     if ($signal = execute($phpunit_command)) {

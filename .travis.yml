@@ -18,14 +18,5 @@ before_script:
   - test -f workspace/core/tests/Drupal/Tests/Component/DrupalComponentTest.php
 
 script:
-
-  # Install our components through composer, getting lowest versions possible.
-  - composer update --prefer-lowest --no-progress
-  # We currently don't use core's phpunit.xml.dist or bootstrap.php. This is
-  # because there are a lot of dependencies in there that won't be available to
-  # us. As core gets better at this, we'll need to change this invocation.
-  - ./vendor/bin/phpunit --bootstrap bootstrap.php tests/Drupal/Tests/Component/
-  # Install our components with the highest possible.
-  - composer update --no-progress
-  # Repeat the tests.
-  - ./vendor/bin/phpunit --bootstrap bootstrap.php tests/Drupal/Tests/Component/
+  # Run our tester script. It will always die on fail or error.
+  - php ./tester.php

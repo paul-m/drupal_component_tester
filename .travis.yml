@@ -9,13 +9,16 @@ before_script:
   - git clone --branch 8.5.x https://git.drupal.org/project/drupal.git
   # Apply patch. You only get one.
   - cd drupal
-  - git apply ../patch/fixes.patch
+  - git apply --verbose ../patch/fixes.patch
   - cd ..
-  # Copy the tests out of core.
-  - cp -R drupal/core/tests .
-  - test -f tests/Drupal/Tests/UnitTestCase.php
+  # Copy the tests out of core. Copy only the component tests or
+  # PHPUnit will complain that it can't find classes during discovery.
+  - mkdir -p workspace/core/tests/Drupal/Tests
+  - cp -R drupal/core/tests/Drupal/Tests/Component ./workspace/core/tests/Drupal/Tests/
+  - test -f workspace/core/tests/Drupal/Tests/Component/DrupalComponentTest.php
 
 script:
+
   # Install our components through composer, getting lowest versions possible.
   - composer update --prefer-lowest --no-progress
   # We currently don't use core's phpunit.xml.dist or bootstrap.php. This is

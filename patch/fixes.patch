@@ -7,7 +7,7 @@ index 51e7d25b00..589879c9bb 100644
      "doctrine/annotations": "1.2.*",
      "drupal/core-file-cache": "^8.2",
 -    "drupal/core-plugin": "^8.2",
-+    "drupal/core-plugin": "^8.5",
++    "drupal/core-plugin": "^8.4",
      "drupal/core-utility": "^8.2"
    },
    "autoload": {
@@ -32,7 +32,7 @@ index 6b7f89f00b..23a8b17ee2 100644
      "drupal/core-utility": "^8.2"
    },
 +  "require-dev": {
-+    "symfony/http-foundation": "~3"
++    "symfony/http-foundation": ">=3.0.0 <4.0.0",
 +  },
    "autoload": {
      "psr-4": {
@@ -49,7 +49,7 @@ index 846034affa..0115ec0826 100644
 +    "symfony/dependency-injection": ">=3.0.0 <4.0.0"
 +  },
 +  "require-dev": {
-+    "drupal/core-utility": "@stable"
++    "drupal/core-utility": "@dev"
    },
    "suggest": {
      "symfony/expression-language": "For using expressions in service container configuration"
@@ -76,7 +76,7 @@ index 86e33a5f91..49f753317f 100644
      "php": ">=5.5.9"
    },
 +  "require-dev": {
-+    "drupal/core-utility": "@stable"
++    "drupal/core-utility": "@dev"
 +  },
    "autoload": {
      "psr-4": {
@@ -104,7 +104,7 @@ index 614652a95c..d650ffb633 100644
      "php": ">=5.5.9"
    },
 +  "require-dev": {
-+    "drupal/core-utility": "@stable",
++    "drupal/core-utility": "@dev",
 +    "mikey179/vfsStream": "^1.2"
 +  },
    "autoload": {
@@ -119,7 +119,7 @@ index abdce4fc81..1787d322f3 100644
      "source": "https://www.drupal.org/project/drupal/git-instructions"
    },
 +  "require-dev": {
-+    "drupal/core-utility": "@stable",
++    "drupal/core-utility": "@dev",
 +    "mikey179/vfsStream": "^1.2"
 +  },
    "autoload": {

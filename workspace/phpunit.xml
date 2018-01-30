@@ -11,5 +11,9 @@
     <ini name="error_reporting" value="32767"/>
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
+    <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
   </php>
+  <listeners>
+      <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+  </listeners>
 </phpunit>

@@ -6,7 +6,7 @@ $loader = require __DIR__ . '/vendor/autoload.php';
 
 $components = [
   // 'package/name' => 'Group',
-//  'drupal/core-annotation' => 'Annotation',
+  'drupal/core-annotation' => 'Annotation',
   'drupal/core-assertion' => 'Assertion',
   'drupal/core-bridge' => 'Bridge',
   'drupal/core-class-finder' => 'ClassFinder',
@@ -102,6 +102,7 @@ function buildComposerArray($component_package, $group, $path) {
     'prefer-stable' => TRUE,
     'require' => [
       'phpunit/phpunit' => '^4.8.35 || ^6.1',
+      'symfony/phpunit-bridge' => '^3.4.3',
       'wikimedia/composer-merge-plugin' => '@stable',
     ],
     'replace' => [
@@ -130,10 +131,10 @@ function buildComposerArray($component_package, $group, $path) {
       'type' => 'composer',
       'url' => 'https://packages.drupal.org/8',
     ],
-    'scripts' => [
+/*    'scripts' => [
       'post-update-cmd' => 'DrupalComponentTester\Composer::upgradePHPUnit',
       'drupal-phpunit-upgrade' => '@composer update phpunit/phpunit --with-dependencies --no-progress',
-    ],
+    ],*/
   ];
 }
 

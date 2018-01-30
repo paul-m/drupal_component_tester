@@ -13,7 +13,7 @@ $components = [
   'drupal/core-datetime' => 'Datetime',
   'drupal/core-dependency-injection' => 'DependencyInjection',
   'drupal/core-diff' => 'Diff',
-// FAILING  'drupal/core-discovery' => 'Discovery',
+  'drupal/core-discovery' => 'Discovery',
   'drupal/core-event-dispatcher' => 'EventDispatcher',
   'drupal/core-file-cache' => 'FileCache',
   'drupal/core-file-system' => 'FileSystem',
@@ -25,10 +25,10 @@ $components = [
   // https://www.drupal.org/project/drupal/issues/2661542
   // 'drupal/core-plugin' => 'Plugin',
   'drupal/core-proxy-builder' => 'ProxyBuilder',
-// FAILING  'drupal/core-render' => 'Render',
+  'drupal/core-render' => 'Render',
   'drupal/core-serialization' => 'Serialization',
   'drupal/core-transliteration' => 'Transliteration',
-// FAILING  'drupal/core-utility' => 'Utility',
+// Mysterious fail:  'drupal/core-utility' => 'Utility',
   'drupal/core-uuid' => 'Uuid',
 ];
 
@@ -59,6 +59,7 @@ foreach ($components as $package => $group) {
     )
   );
 
+  // 'Priming' required because we use wikimedia merge plugin.
   $composer_command = 'composer update --lock --no-progress --no-suggest --prefer-dist';
   echo "\n\nPRIMING -> $composer_command\n\n";
   if ($signal = execute($composer_command)) {
@@ -66,8 +67,8 @@ foreach ($components as $package => $group) {
   }
 
   // Composer update and run tests.
-  foreach (['--prefer-lowest', ' '] as $argument) {
-    $composer_command = 'composer update --lock --no-progress --no-suggest --prefer-dist ' . $argument;
+  foreach ([' ', '--prefer-lowest'] as $argument) {
+    $composer_command = 'composer update --no-progress --no-suggest --prefer-dist ' . $argument;
     echo "\n\nCOMPOSER -> $composer_command\n\n";
     if ($signal = execute($composer_command)) {
       exit($signal);
@@ -92,6 +93,7 @@ function buildComposerArray($component_package, $group, $path) {
     'description' => 'Dummy package for the component.',
     'license' => 'GPL-2.0+',
     'minimum-stability' => 'dev',
+    'prefer-stable' => TRUE,
     'require' => [
       'phpunit/phpunit' => '^4.8.35 || ^6.1',
       'wikimedia/composer-merge-plugin' => '@stable',

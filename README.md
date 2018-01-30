@@ -16,9 +16,9 @@ This project does the following:
 * Apply a patch as needed.
 * Copy the `core/tests/Drupal/Tests/Components` directory to a working directory.
 * One by one, copy (patched) components to the working directory and:
-	* Use `composer update --prefer-lowest`
+	* Use `composer update`
 	* Run the tests.
-	* Use `Composer update`
+	* Use `composer update --prefer-lowest`
 	* Run the tests again.
 * Repeat this process in each PHP version supported by Drupal 8.5.x.
 

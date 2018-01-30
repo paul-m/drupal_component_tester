@@ -2,7 +2,10 @@ sudo: false
 language: php
 php:
   - 5.5
+  - 5.6
+  - 7.0
   - 7.1
+  - 7.2
 
 before_script:
   # Git clone the Drupal 8.5.x repo, so that we can apply patches to it.

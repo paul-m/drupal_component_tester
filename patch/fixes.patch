@@ -1,10 +1,13 @@
 diff --git a/core/lib/Drupal/Component/Annotation/composer.json b/core/lib/Drupal/Component/Annotation/composer.json
-index 51e7d25b00..589879c9bb 100644
+index 51e7d25b00..c384473c08 100644
 --- a/core/lib/Drupal/Component/Annotation/composer.json
 +++ b/core/lib/Drupal/Component/Annotation/composer.json
-@@ -9,7 +9,7 @@
+@@ -7,9 +7,9 @@
+   "require": {
+     "php": ">=5.5.9",
      "doctrine/common": "^2.5",
-     "doctrine/annotations": "1.2.*",
+-    "doctrine/annotations": "1.2.*",
++    "doctrine/annotations": "^1.2",
      "drupal/core-file-cache": "^8.2",
 -    "drupal/core-plugin": "^8.2",
 +    "drupal/core-plugin": "^8.5",

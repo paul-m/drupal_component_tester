@@ -1,3 +1,16 @@
+diff --git a/core/lib/Drupal/Component/Annotation/composer.json b/core/lib/Drupal/Component/Annotation/composer.json
+index 51e7d25b00..589879c9bb 100644
+--- a/core/lib/Drupal/Component/Annotation/composer.json
++++ b/core/lib/Drupal/Component/Annotation/composer.json
+@@ -9,7 +9,7 @@
+     "doctrine/common": "^2.5",
+     "doctrine/annotations": "1.2.*",
+     "drupal/core-file-cache": "^8.2",
+-    "drupal/core-plugin": "^8.2",
++    "drupal/core-plugin": "^8.5",
+     "drupal/core-utility": "^8.2"
+   },
+   "autoload": {
 diff --git a/core/lib/Drupal/Component/Bridge/composer.json b/core/lib/Drupal/Component/Bridge/composer.json
 index 19c8a3b1d3..a8666aa88c 100644
 --- a/core/lib/Drupal/Component/Bridge/composer.json
@@ -10,6 +23,20 @@ index 19c8a3b1d3..a8666aa88c 100644
      "zendframework/zend-feed": "^2.4"
    },
    "autoload": {
+diff --git a/core/lib/Drupal/Component/Datetime/composer.json b/core/lib/Drupal/Component/Datetime/composer.json
+index 6b7f89f00b..23a8b17ee2 100644
+--- a/core/lib/Drupal/Component/Datetime/composer.json
++++ b/core/lib/Drupal/Component/Datetime/composer.json
+@@ -8,6 +8,9 @@
+     "php": ">=5.5.9",
+     "drupal/core-utility": "^8.2"
+   },
++  "require-dev": {
++    "symfony/http-foundation": "~3"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Datetime\\": ""
 diff --git a/core/lib/Drupal/Component/DependencyInjection/composer.json b/core/lib/Drupal/Component/DependencyInjection/composer.json
 index 846034affa..38fac630c5 100644
 --- a/core/lib/Drupal/Component/DependencyInjection/composer.json

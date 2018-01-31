@@ -131,10 +131,10 @@ function buildComposerArray($component_package, $group, $path) {
       'type' => 'composer',
       'url' => 'https://packages.drupal.org/8',
     ],
-/*    'scripts' => [
+    'scripts' => [
       'post-update-cmd' => 'DrupalComponentTester\Composer::upgradePHPUnit',
       'drupal-phpunit-upgrade' => '@composer update phpunit/phpunit --with-dependencies --no-progress',
-    ],*/
+    ],
   ];
 }
 

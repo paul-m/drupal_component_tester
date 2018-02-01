@@ -8,8 +8,8 @@ php:
   - 7.2
 
 before_script:
-  # Git clone the Drupal 8.5.x repo, so that we can apply patches to it.
-  - git clone --branch 8.5.x https://git.drupal.org/project/drupal.git
+  # Git clone the Drupal 8.6.x repo, so that we can apply patches to it.
+  - git clone --branch 8.6.x https://git.drupal.org/project/drupal.git
   # Apply patch. You only get one.
   - cd drupal
   - git apply --verbose ../patch/fixes.patch

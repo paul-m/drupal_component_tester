@@ -12,15 +12,16 @@ This is a Travis-CI test process which tries to isolate Drupal's components and 
 
 This project does the following:
 
-* Check out Drupal 8.5.x.
+* Check out Drupal 8.x.x.
 * Apply a patch as needed.
 * Copy the `core/tests/Drupal/Tests/Components` directory to a working directory.
+* Generate a `composer.json` file for the component.
 * One by one, copy (patched) components to the working directory and:
 	* Use `composer update`
 	* Run the tests.
 	* Use `composer update --prefer-lowest`
 	* Run the tests again.
-* Repeat this process in each PHP version supported by Drupal 8.5.x.
+* Repeat this process in each PHP version supported by that Drupal version.
 
 This will test whether each component's dependencies resolve in Composer, and also whether the version constraints are useful.
 

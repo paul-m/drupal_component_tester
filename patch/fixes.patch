@@ -75,7 +75,7 @@ index 4de189402a..cb9b29b0df 100644
    "autoload": {
      "psr-4": {
 diff --git a/core/lib/Drupal/Component/EventDispatcher/composer.json b/core/lib/Drupal/Component/EventDispatcher/composer.json
-index cfbcc72e3f..8837ec42a5 100644
+index cfbcc72e3f..f10d4f422c 100644
 --- a/core/lib/Drupal/Component/EventDispatcher/composer.json
 +++ b/core/lib/Drupal/Component/EventDispatcher/composer.json
 @@ -7,7 +7,7 @@
@@ -83,7 +83,7 @@ index cfbcc72e3f..8837ec42a5 100644
      "php": ">=5.5.9",
      "symfony/dependency-injection": ">=2.8 <4.0.0",
 -    "symfony/event-dispatcher": ">=2.7 <4.0.0"
-+    "symfony/event-dispatcher": ">=3.2 <4.0.0"
++    "symfony/event-dispatcher": ">=3.4 <4.0.0"
    },
    "autoload": {
      "psr-4": {

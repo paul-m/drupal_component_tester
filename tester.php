@@ -21,9 +21,7 @@ $components = [
   'drupal/core-graph' => 'Graph',
   'drupal/core-http-foundation' => 'HttpFoundation',
   'drupal/core-php-storage' => 'PhpStorage',
-  // Plugin is not testable:
-  // https://www.drupal.org/project/drupal/issues/2661542
-  // 'drupal/core-plugin' => 'Plugin',
+  'drupal/core-plugin' => 'Plugin',
   'drupal/core-proxy-builder' => 'ProxyBuilder',
   'drupal/core-render' => 'Render',
   'drupal/core-serialization' => 'Serialization',

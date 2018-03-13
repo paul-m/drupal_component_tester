@@ -34,3 +34,4 @@ What did we learn?
 * Since Drupal components are currently in the `core/composer.json` 'replace' section, we have to make our own project and copy the test files somewhere convenient to that project.
 * ~~Component tests inherit from `Drupal\Tests\UnitTestCase`, which has a dependency on `\Drupal`. This automatically makes them not isolated.~~ This is fixed in https://www.drupal.org/project/drupal/issues/2866894
 * `TestDiscovery` still has a dependency on simpletest, disallowing the use of test suites, so we can't use core's phpunit.xml config: https://www.drupal.org/node/2863055
+

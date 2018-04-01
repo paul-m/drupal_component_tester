@@ -115,6 +115,20 @@ index 528bb0744a..084e991766 100644
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\FileSystem\\": ""
+diff --git a/core/lib/Drupal/Component/Gettext/composer.json b/core/lib/Drupal/Component/Gettext/composer.json
+index 87f500a108..a3744575a5 100644
+--- a/core/lib/Drupal/Component/Gettext/composer.json
++++ b/core/lib/Drupal/Component/Gettext/composer.json
+@@ -12,6 +12,9 @@
+     "php": ">=5.5.9",
+     "drupal/core-utility": "^8.2"
+   },
++  "require-dev": {
++    "mikey179/vfsStream": "^1.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Gettext\\": ""
 diff --git a/core/lib/Drupal/Component/PhpStorage/composer.json b/core/lib/Drupal/Component/PhpStorage/composer.json
 index 614652a95c..af7f1353c3 100644
 --- a/core/lib/Drupal/Component/PhpStorage/composer.json

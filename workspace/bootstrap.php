@@ -5,9 +5,11 @@ function loader() {
   return $autoloader;
 }
 
+$test_loader = loader();
+
 // Register the assertion handler. Only the Utility component needs this.
 if (class_exists('Drupal\Component\Assertion\Handle')) {
   Drupal\Component\Assertion\Handle::register();
 }
 
-return loader();
+return $test_loader;

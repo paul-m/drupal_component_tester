@@ -172,3 +172,17 @@ index abdce4fc81..fd900e54db 100644
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Transliteration\\": ""
+diff --git a/core/lib/Drupal/Component/Utility/composer.json b/core/lib/Drupal/Component/Utility/composer.json
+index 3b8b5de5b8..bfa1d9006f 100644
+--- a/core/lib/Drupal/Component/Utility/composer.json
++++ b/core/lib/Drupal/Component/Utility/composer.json
+@@ -9,6 +9,9 @@
+     "paragonie/random_compat": "^1.0|^2.0",
+     "drupal/core-render": "^8.2"
+   },
++  "require-dev": {
++    "drupal/core-assertion": "^8.2"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Utility\\": ""

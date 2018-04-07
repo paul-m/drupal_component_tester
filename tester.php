@@ -26,7 +26,7 @@ $components = [
   'drupal/core-render' => 'Render',
   'drupal/core-serialization' => 'Serialization',
   'drupal/core-transliteration' => 'Transliteration',
-// Mysterious fail:  'drupal/core-utility' => 'Utility',
+  'drupal/core-utility' => 'Utility',
   'drupal/core-uuid' => 'Uuid',
 ];
 

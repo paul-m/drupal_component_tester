@@ -72,12 +72,6 @@ foreach ($components as $package => $group) {
       exit($signal);
     }
 
-    $composer_command = 'composer dumpautoload';
-    echo "\n\nCOMPOSER -> $composer_command\n\n";
-    if ($signal = execute($composer_command)) {
-      exit($signal);
-    }
-
     $phpunit_command = './vendor/bin/phpunit core/tests/Drupal/Tests/Component/' . $group;
     echo "\n\nPHPUNIT -> $phpunit_command\n\n";
     if ($signal = execute($phpunit_command)) {
@@ -99,8 +93,6 @@ function buildComposerArray($component_package, $group, $path) {
     'minimum-stability' => 'dev',
     'prefer-stable' => TRUE,
     'require' => [
-      'phpunit/phpunit' => '^4.8.35 || ^6.1',
-//      'symfony/phpunit-bridge' => '^3.4.3',
       'wikimedia/composer-merge-plugin' => '^1.4',
     ],
     'replace' => [

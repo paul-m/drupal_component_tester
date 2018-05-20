@@ -6,7 +6,7 @@ $loader = require __DIR__ . '/vendor/autoload.php';
 
 $components = [
   // 'package/name' => 'Group',
-  'drupal/core-annotation' => 'Annotation',
+/*  'drupal/core-annotation' => 'Annotation',
   'drupal/core-assertion' => 'Assertion',
   'drupal/core-bridge' => 'Bridge',
   'drupal/core-class-finder' => 'ClassFinder',
@@ -24,7 +24,7 @@ $components = [
   'drupal/core-plugin' => 'Plugin',
   'drupal/core-proxy-builder' => 'ProxyBuilder',
   'drupal/core-render' => 'Render',
-  'drupal/core-serialization' => 'Serialization',
+*/  'drupal/core-serialization' => 'Serialization',
   'drupal/core-transliteration' => 'Transliteration',
   'drupal/core-utility' => 'Utility',
   'drupal/core-uuid' => 'Uuid',

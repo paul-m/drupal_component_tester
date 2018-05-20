@@ -11,6 +11,7 @@ before_script:
   # Want YAML.
   - pecl channel-update pecl.php.net
   - (CFLAGS="-O1 -g3 -fno-strict-aliasing"; pecl install yaml < /dev/null &)
+  - echo "extension=yaml.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   # Remove XDebug.
   - phpenv config-rm xdebug.ini
   # Git clone the Drupal 8.6.x repo, so that we can apply patches to it.

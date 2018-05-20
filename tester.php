@@ -67,12 +67,13 @@ foreach ($components as $package => $group) {
   // Composer update and run tests.
   foreach ([' ', '--prefer-lowest'] as $argument) {
     $composer_command = 'composer update --no-progress --no-suggest --prefer-dist ' . $argument;
-    echo "\n\nCOMPOSER -> $composer_command\n\n";
+    $lowest = strtoupper($argument);
+    echo "\n\nCOMPOSER $lowest -> $composer_command\n\n";
     if ($signal = execute($composer_command)) {
       exit($signal);
     }
 
-    $phpunit_command = './vendor/bin/phpunit core/tests/Drupal/Tests/Component/' . $group;
+    $phpunit_command = './vendor/bin/phpunit -v core/tests/Drupal/Tests/Component/' . $group;
     echo "\n\nPHPUNIT -> $phpunit_command\n\n";
     if ($signal = execute($phpunit_command)) {
       exit($signal);

@@ -309,15 +309,10 @@ index abdce4fc81..1809008747 100644
      "psr-4": {
        "Drupal\\Component\\Transliteration\\": ""
 diff --git a/core/lib/Drupal/Component/Utility/composer.json b/core/lib/Drupal/Component/Utility/composer.json
-index b89e813903..4a5f8f680d 100644
+index b89e813903..4c69dc4efd 100644
 --- a/core/lib/Drupal/Component/Utility/composer.json
 +++ b/core/lib/Drupal/Component/Utility/composer.json
-@@ -7,10 +7,14 @@
-   "require": {
-     "php": ">=5.5.9",
-     "paragonie/random_compat": "^1.0|^2.0",
--    "drupal/core-render": "^8.2",
-+    "drupal/core-render": "^8.6",
+@@ -11,6 +11,10 @@
      "symfony/polyfill-iconv": "~1.0",
      "symfony/polyfill-mbstring": "~1.0"
    },

@@ -9,6 +9,7 @@ php:
 
 addons:
   apt:
+    update: true
     packages:
       - libyaml-dev
 
@@ -19,7 +20,7 @@ before_script:
   # Remove XDebug.
   - phpenv config-rm xdebug.ini
   # Git clone the Drupal 8.6.x repo, so that we can apply patches to it.
-  - git clone --branch 8.6.x https://git.drupal.org/project/drupal.git
+  - git clone --depth 1 --branch 8.6.x https://git.drupal.org/project/drupal.git
   # Apply patch. You only get one.
   - cd drupal
   - git apply --verbose ../patch/fixes.patch

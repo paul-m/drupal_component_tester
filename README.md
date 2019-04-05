@@ -5,6 +5,8 @@ Status
 ---
 [![Build Status](https://travis-ci.org/paul-m/drupal_component_tester.svg?branch=master)](https://travis-ci.org/paul-m/drupal_component_tester)
 
+Currently using the patch from https://www.drupal.org/project/drupal/issues/2876669#comment-12621692
+
 What?
 -----
 

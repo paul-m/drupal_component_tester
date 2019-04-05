@@ -8,7 +8,9 @@ $components = [
   // 'package/name' => 'Group',
   'drupal/core-annotation' => 'Annotation',
   'drupal/core-assertion' => 'Assertion',
-  'drupal/core-bridge' => 'Bridge',
+  // @todo Uncomment this after
+  //   https://www.drupal.org/project/drupal/issues/3045483
+  // 'drupal/core-bridge' => 'Bridge',
   'drupal/core-class-finder' => 'ClassFinder',
   'drupal/core-datetime' => 'Datetime',
   'drupal/core-dependency-injection' => 'DependencyInjection',

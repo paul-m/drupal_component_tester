@@ -309,10 +309,14 @@ index abdce4fc81..1809008747 100644
      "psr-4": {
        "Drupal\\Component\\Transliteration\\": ""
 diff --git a/core/lib/Drupal/Component/Utility/composer.json b/core/lib/Drupal/Component/Utility/composer.json
-index b89e813903..4c69dc4efd 100644
+index b89e813903..220bb8cb40 100644
 --- a/core/lib/Drupal/Component/Utility/composer.json
 +++ b/core/lib/Drupal/Component/Utility/composer.json
-@@ -11,6 +11,10 @@
+@@ -8,9 +8,14 @@
+     "php": ">=5.5.9",
+     "paragonie/random_compat": "^1.0|^2.0",
+     "drupal/core-render": "^8.2",
++    "egulias/email-validator": "^2.0",
      "symfony/polyfill-iconv": "~1.0",
      "symfony/polyfill-mbstring": "~1.0"
    },
@@ -324,7 +328,7 @@ index b89e813903..4c69dc4efd 100644
      "psr-4": {
        "Drupal\\Component\\Utility\\": ""
 diff --git a/core/lib/Drupal/Component/Uuid/composer.json b/core/lib/Drupal/Component/Uuid/composer.json
-index 8e9cced871..4a346561b3 100644
+index fb78d9e0e8..eaee66895c 100644
 --- a/core/lib/Drupal/Component/Uuid/composer.json
 +++ b/core/lib/Drupal/Component/Uuid/composer.json
 @@ -12,6 +12,9 @@

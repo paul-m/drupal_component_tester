@@ -1,10 +1,10 @@
 diff --git a/core/lib/Drupal/Component/Annotation/composer.json b/core/lib/Drupal/Component/Annotation/composer.json
-index 51e7d25b00..1bfd04fa8d 100644
+index 49e0ced813..1a28233914 100644
 --- a/core/lib/Drupal/Component/Annotation/composer.json
 +++ b/core/lib/Drupal/Component/Annotation/composer.json
 @@ -7,11 +7,14 @@
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "doctrine/common": "^2.5",
 -    "doctrine/annotations": "1.2.*",
 +    "doctrine/annotations": "^1.2",
@@ -14,109 +14,109 @@ index 51e7d25b00..1bfd04fa8d 100644
      "drupal/core-utility": "^8.2"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Annotation\\": ""
 diff --git a/core/lib/Drupal/Component/Assertion/composer.json b/core/lib/Drupal/Component/Assertion/composer.json
-index cdc8c928fb..e39c01373e 100644
+index 40ddc38819..5722db1ef4 100644
 --- a/core/lib/Drupal/Component/Assertion/composer.json
 +++ b/core/lib/Drupal/Component/Assertion/composer.json
 @@ -7,6 +7,9 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Assertion\\": ""
 diff --git a/core/lib/Drupal/Component/Bridge/composer.json b/core/lib/Drupal/Component/Bridge/composer.json
-index 19c8a3b1d3..583cd300e1 100644
+index 90a04b4cb4..5cc577b647 100644
 --- a/core/lib/Drupal/Component/Bridge/composer.json
 +++ b/core/lib/Drupal/Component/Bridge/composer.json
 @@ -6,8 +6,12 @@
    "license": "GPL-2.0-or-later",
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
 +    "symfony/dependency-injection": ">=3.0.0 <4.0.0",
      "zendframework/zend-feed": "^2.4"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Bridge\\": ""
 diff --git a/core/lib/Drupal/Component/ClassFinder/composer.json b/core/lib/Drupal/Component/ClassFinder/composer.json
-index c5a97b09f1..23a9161bbf 100644
+index e62104a357..064c17adb6 100644
 --- a/core/lib/Drupal/Component/ClassFinder/composer.json
 +++ b/core/lib/Drupal/Component/ClassFinder/composer.json
 @@ -8,6 +8,9 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "doctrine/common": "^2.5"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\ClassFinder\\": ""
 diff --git a/core/lib/Drupal/Component/Datetime/composer.json b/core/lib/Drupal/Component/Datetime/composer.json
-index 6b7f89f00b..2bc2095410 100644
+index 41d8e13531..62925121fc 100644
 --- a/core/lib/Drupal/Component/Datetime/composer.json
 +++ b/core/lib/Drupal/Component/Datetime/composer.json
 @@ -8,6 +8,10 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "drupal/core-utility": "^8.2"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5",
++    "phpunit/phpunit": "^6.5",
 +    "symfony/http-foundation": ">=3.0.0 <4.0.0"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Datetime\\": ""
 diff --git a/core/lib/Drupal/Component/DependencyInjection/composer.json b/core/lib/Drupal/Component/DependencyInjection/composer.json
-index 846034affa..8988c50092 100644
+index 530bef4372..a9861d0893 100644
 --- a/core/lib/Drupal/Component/DependencyInjection/composer.json
 +++ b/core/lib/Drupal/Component/DependencyInjection/composer.json
 @@ -12,7 +12,11 @@
    },
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
 -    "symfony/dependency-injection": ">=2.8 <4.0.0"
 +    "symfony/dependency-injection": ">=3.3.0 <4.0.0"
 +  },
 +  "require-dev": {
 +    "drupal/core-utility": "^8.1@dev",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
    },
    "suggest": {
      "symfony/expression-language": "For using expressions in service container configuration"
 diff --git a/core/lib/Drupal/Component/Diff/composer.json b/core/lib/Drupal/Component/Diff/composer.json
-index b3016084a2..4be8174d41 100644
+index dbec520b9e..bbc9f8eed3 100644
 --- a/core/lib/Drupal/Component/Diff/composer.json
 +++ b/core/lib/Drupal/Component/Diff/composer.json
 @@ -8,6 +8,9 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "symfony/polyfill-mbstring": "~1.0"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Diff\\": ""
 diff --git a/core/lib/Drupal/Component/Discovery/composer.json b/core/lib/Drupal/Component/Discovery/composer.json
-index 4de189402a..68b20486c1 100644
+index bcc26f18c4..65c9b0fdea 100644
 --- a/core/lib/Drupal/Component/Discovery/composer.json
 +++ b/core/lib/Drupal/Component/Discovery/composer.json
 @@ -7,7 +7,13 @@
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "drupal/core-file-cache": "^8.2",
 -    "drupal/core-serialization": "^8.2"
 +    "drupal/core-filesystem": "^8.2",
@@ -125,175 +125,175 @@ index 4de189402a..68b20486c1 100644
 +  },
 +  "require-dev": {
 +    "mikey179/vfsStream": "^1.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
    },
    "autoload": {
      "psr-4": {
 diff --git a/core/lib/Drupal/Component/EventDispatcher/composer.json b/core/lib/Drupal/Component/EventDispatcher/composer.json
-index cfbcc72e3f..78e8994723 100644
+index 31c82a5cf1..11cf8df089 100644
 --- a/core/lib/Drupal/Component/EventDispatcher/composer.json
 +++ b/core/lib/Drupal/Component/EventDispatcher/composer.json
 @@ -7,7 +7,10 @@
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "symfony/dependency-injection": ">=2.8 <4.0.0",
 -    "symfony/event-dispatcher": ">=2.7 <4.0.0"
 +    "symfony/event-dispatcher": ">=3.4 <4.0.0"
 +  },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
    },
    "autoload": {
      "psr-4": {
 diff --git a/core/lib/Drupal/Component/FileCache/composer.json b/core/lib/Drupal/Component/FileCache/composer.json
-index 86e33a5f91..c950ad20a6 100644
+index 5f18f2bb9b..cbae06686c 100644
 --- a/core/lib/Drupal/Component/FileCache/composer.json
 +++ b/core/lib/Drupal/Component/FileCache/composer.json
 @@ -7,6 +7,10 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
 +    "drupal/core-utility": "^8.1@dev",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\FileCache\\": ""
 diff --git a/core/lib/Drupal/Component/FileSystem/composer.json b/core/lib/Drupal/Component/FileSystem/composer.json
-index 528bb0744a..a4d689831e 100644
+index e9433c08e5..afb1e976af 100644
 --- a/core/lib/Drupal/Component/FileSystem/composer.json
 +++ b/core/lib/Drupal/Component/FileSystem/composer.json
 @@ -7,6 +7,10 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
 +    "mikey179/vfsStream": "^1.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\FileSystem\\": ""
 diff --git a/core/lib/Drupal/Component/Gettext/composer.json b/core/lib/Drupal/Component/Gettext/composer.json
-index 87f500a108..4db29cb7fb 100644
+index ff578b3e3d..aa68943ad4 100644
 --- a/core/lib/Drupal/Component/Gettext/composer.json
 +++ b/core/lib/Drupal/Component/Gettext/composer.json
 @@ -12,6 +12,10 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "drupal/core-utility": "^8.2"
    },
 +  "require-dev": {
 +    "mikey179/vfsStream": "^1.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Gettext\\": ""
 diff --git a/core/lib/Drupal/Component/Graph/composer.json b/core/lib/Drupal/Component/Graph/composer.json
-index e8f645fd20..3c8dcd85b4 100644
+index ea144deb8e..aff2a199b8 100644
 --- a/core/lib/Drupal/Component/Graph/composer.json
 +++ b/core/lib/Drupal/Component/Graph/composer.json
 @@ -7,6 +7,9 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Graph\\": ""
 diff --git a/core/lib/Drupal/Component/HttpFoundation/composer.json b/core/lib/Drupal/Component/HttpFoundation/composer.json
-index 910a648a21..29c6dd60e2 100644
+index 7c133d6cdf..1356c84de9 100644
 --- a/core/lib/Drupal/Component/HttpFoundation/composer.json
 +++ b/core/lib/Drupal/Component/HttpFoundation/composer.json
 @@ -8,6 +8,9 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "symfony/http-foundation": ">=2.7 <4.0.0"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\HttpFoundation\\": ""
 diff --git a/core/lib/Drupal/Component/PhpStorage/composer.json b/core/lib/Drupal/Component/PhpStorage/composer.json
-index 614652a95c..fb1c2c3df5 100644
+index e4ff9b69be..01053f82d2 100644
 --- a/core/lib/Drupal/Component/PhpStorage/composer.json
 +++ b/core/lib/Drupal/Component/PhpStorage/composer.json
 @@ -7,6 +7,11 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
 +    "drupal/core-utility": "^8.1@dev",
 +    "mikey179/vfsStream": "^1.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\PhpStorage\\": ""
 diff --git a/core/lib/Drupal/Component/Plugin/composer.json b/core/lib/Drupal/Component/Plugin/composer.json
-index 77f02d6fb1..5b5ffef6ba 100644
+index 76883c83f0..225ffbde50 100644
 --- a/core/lib/Drupal/Component/Plugin/composer.json
 +++ b/core/lib/Drupal/Component/Plugin/composer.json
 @@ -8,6 +8,9 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "symfony/validator": ">=2.7 <4.0.0"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Plugin\\": ""
 diff --git a/core/lib/Drupal/Component/ProxyBuilder/composer.json b/core/lib/Drupal/Component/ProxyBuilder/composer.json
-index 52fbdb8065..7e449d298b 100644
+index 7e024a8245..bb02306680 100644
 --- a/core/lib/Drupal/Component/ProxyBuilder/composer.json
 +++ b/core/lib/Drupal/Component/ProxyBuilder/composer.json
 @@ -7,6 +7,9 @@
    "require": {
-     "php": ">=5.5.9"
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\ProxyBuilder\\": ""
 diff --git a/core/lib/Drupal/Component/Render/composer.json b/core/lib/Drupal/Component/Render/composer.json
-index 9e44b2dd39..55a1e2fa0b 100644
+index e92cd1e28f..27c744e9c1 100644
 --- a/core/lib/Drupal/Component/Render/composer.json
 +++ b/core/lib/Drupal/Component/Render/composer.json
 @@ -8,6 +8,9 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "drupal/core-utility": "^8.2"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Render\\": ""
 diff --git a/core/lib/Drupal/Component/Serialization/composer.json b/core/lib/Drupal/Component/Serialization/composer.json
-index 3439f58639..cb7462a580 100644
+index 9466c010e2..fd081f0f6c 100644
 --- a/core/lib/Drupal/Component/Serialization/composer.json
 +++ b/core/lib/Drupal/Component/Serialization/composer.json
 @@ -6,7 +6,10 @@
    "license": "GPL-2.0-or-later",
    "require": {
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
 -    "symfony/yaml": ">=2.7 <4.0.0"
 +    "symfony/yaml": ">=3.3 <4.0.0"
 +  },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
    },
    "autoload": {
      "psr-4": {
 diff --git a/core/lib/Drupal/Component/Transliteration/composer.json b/core/lib/Drupal/Component/Transliteration/composer.json
-index abdce4fc81..1809008747 100644
+index abdce4fc81..92a6e56582 100644
 --- a/core/lib/Drupal/Component/Transliteration/composer.json
 +++ b/core/lib/Drupal/Component/Transliteration/composer.json
 @@ -8,6 +8,11 @@
@@ -303,17 +303,17 @@ index abdce4fc81..1809008747 100644
 +  "require-dev": {
 +    "drupal/core-utility": "^8.1@dev",
 +    "mikey179/vfsStream": "^1.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Transliteration\\": ""
 diff --git a/core/lib/Drupal/Component/Utility/composer.json b/core/lib/Drupal/Component/Utility/composer.json
-index b89e813903..220bb8cb40 100644
+index dcbc5c4716..4fda682753 100644
 --- a/core/lib/Drupal/Component/Utility/composer.json
 +++ b/core/lib/Drupal/Component/Utility/composer.json
 @@ -8,9 +8,14 @@
-     "php": ">=5.5.9",
+     "php": ">=7.0.8",
      "paragonie/random_compat": "^1.0|^2.0",
      "drupal/core-render": "^8.2",
 +    "egulias/email-validator": "^2.0",
@@ -322,22 +322,36 @@ index b89e813903..220bb8cb40 100644
    },
 +  "require-dev": {
 +    "drupal/core-assertion": "^8.2",
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Utility\\": ""
 diff --git a/core/lib/Drupal/Component/Uuid/composer.json b/core/lib/Drupal/Component/Uuid/composer.json
-index fb78d9e0e8..eaee66895c 100644
+index 67c13893e5..ea28d71b1d 100644
 --- a/core/lib/Drupal/Component/Uuid/composer.json
 +++ b/core/lib/Drupal/Component/Uuid/composer.json
-@@ -12,6 +12,9 @@
-     "php": ">=5.5.9",
-     "drupal/core-utility": "^8.2"
+@@ -11,6 +11,9 @@
+   "require": {
+     "php": ">=7.0.8"
    },
 +  "require-dev": {
-+    "phpunit/phpunit": "^4.8.35 || ^6.5"
++    "phpunit/phpunit": "^6.5"
 +  },
    "autoload": {
      "psr-4": {
        "Drupal\\Component\\Uuid\\": ""
+diff --git a/core/lib/Drupal/Component/Version/composer.json b/core/lib/Drupal/Component/Version/composer.json
+index 3532e94be2..b9cf0f38ac 100644
+--- a/core/lib/Drupal/Component/Version/composer.json
++++ b/core/lib/Drupal/Component/Version/composer.json
+@@ -7,6 +7,9 @@
+   "require": {
+     "php": ">=7.0.8"
+   },
++  "require-dev": {
++    "phpunit/phpunit": "^6.5"
++  },
+   "autoload": {
+     "psr-4": {
+       "Drupal\\Component\\Version\\": ""
